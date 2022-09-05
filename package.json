@@ -1,16 +1,22 @@
 {
-  "name": "root",
+  "name": "replicad-vite",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-      "prepare-packages": "lerna exec yarn build --no-private --no-bail",
-      "publish-packages": "lerna publish"
+    "prepare-packages": "lerna exec yarn build --no-private --no-bail",
+    "publish-packages": "lerna publish"
   },
   "devDependencies": {
     "eslint": "^8.1.0",
     "lerna": "^4.0.0",
     "prettier": "^2.4.1"
-  }
+  },
+  "version": "1",
+  "description": "convert all rollup to vite",
+  "main": "q",
+  "repository": "q",
+  "author": "q",
+  "license": "q"
 }
