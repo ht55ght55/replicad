@@ -232,10 +232,16 @@ mainBuild:
     - symbol: ShapeFix_EdgeConnect
 
     - symbol: StlAPI
-
   emccFlags:
+    - -flto
+    - -fexceptions
+    - -sDISABLE_EXCEPTION_CATCHING=1
+    - -O3
     - -sEXPORT_ES6=1
     - -sUSE_ES6_IMPORT_META=0
+    - -sEXPORTED_RUNTIME_METHODS=['FS']
+    - -sINITIAL_MEMORY=15MB
     - -sALLOW_MEMORY_GROWTH=1
-    - -sEXPORTED_RUNTIME_METHODS=["FS"]
-    - -O3
+    - -sLLD_REPORT_UNDEFINED
+    - --no-entry
+    - -sENVIRONMENT='web'
