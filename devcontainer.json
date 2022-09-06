@@ -1,0 +1,11 @@
+{
+  "customizations": {
+    "codespaces": {
+      "repositories": {
+        "ht55ght55/*": {
+          "permissions": "write-all"
+        }
+      }
+    }
+  }
+}
