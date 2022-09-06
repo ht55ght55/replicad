@@ -1,14 +1,18 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
-import { BoxHelper } from 'three'
+import { InterpolateLinear } from 'three'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svelte()],
+  plugins: [
+    svelte(),
+  ],
   build: {
+  sourcemap: 'inline',
   lib: {
     entry: 'lib/replicad-threejs-helper.ts',
-    name: 'replicad-threejs-helper',
-    fileName: 'replicad-threejs-helper'
+    name: 'replicad',
+    fileName: 'replicad-threejs-helper',
+    formats: ['es', 'umd', 'cjs'] 
   }}
 })

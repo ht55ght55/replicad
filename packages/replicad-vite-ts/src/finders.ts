@@ -1,7 +1,8 @@
-import { Vector, asPnt, Point, Plane, PlaneName } from "./geom";
+import { Vector, asPnt, Plane } from "./geom";
+import type { Point, PlaneName } from "./geom";
 import { makePlane } from "./geomHelpers";
 import { DEG2RAD } from "./constants";
-import { Face, Edge, AnyShape, SurfaceType, CurveType } from "./shapes";
+import type { Face, Edge, AnyShape, SurfaceType, CurveType } from "./shapes";
 import { getOC } from "./oclib";
 import { GCWithObject, GCWithScope } from "./register";
 

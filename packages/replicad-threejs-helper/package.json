@@ -3,41 +3,49 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "files": ["dist"],
-  "main": "./dist/replicad-threejs-helper.cjs",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/replicad-threejs-helper.umd.cjs",
   "module": "./dist/replicad-threejs-helper.js",
   "exports": {
     ".": {
-      "import": "./dist/replicad-three-js-helper.js",
-      "require": "./dist/replicad-three-js.umd.cjs"
+      "import": "./dist/replicad-threejs-helper.js",
+      "require": "./dist/replicad-threejs-helper.umd.cjs"
     }
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json",    "build-doc": "typedoc --exclude \"../replicad-opencascadejs/*\" --out docs --theme minimal src",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "build-doc": "typedoc --exclude \"../replicad-opencascadejs/*\" --out docs --theme minimal src",
     "build-docss": "typedoc --help",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "devDependencies": {
-    "@types/three": "^0.134.0",
     "@sveltejs/vite-plugin-svelte": "^1.0.2",
     "@tsconfig/svelte": "^3.0.0",
-    "svelte": "^3.49.0",
-    "svelte-check": "^2.8.1",
-    "svelte-preprocess": "^4.10.7",
-    "tslib": "^2.4.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.1.0",
+    "@types/three": "^0.134.0",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.4.0",
     "eslint": "^8.1.0",
     "prettier": "^2.4.1",
     "replicad-opencascadejs": "^0.13.0",
-    "typedoc": "^0.22.7"
+    "svelte": "^3.49.0",
+    "svelte-check": "^2.8.1",
+    "svelte-preprocess": "^4.10.7",
+    "tslib": "^2.4.0",
+    "typedoc": "^0.22.7",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vite-plugin-commonjs": "^0.5.2",
+    "vite-plugin-resolve": "^2.1.2"
   },
   "peerDependencies": {
-    "three": "^0.134.0"
+    "three": "^0.144.0"
+  },
+  "dependencies": {
+    "three": "^0.144.0"
   }
 }

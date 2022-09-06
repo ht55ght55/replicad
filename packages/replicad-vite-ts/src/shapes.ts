@@ -1,9 +1,10 @@
 import { WrappingObj, GCWithScope } from "./register.js";
-import { Vector, Point, Plane, PlaneName, asPnt, BoundingBox } from "./geom.js";
+import { Vector, Plane, asPnt, BoundingBox } from "./geom.js";
+import type { Point, PlaneName } from "./geom.js";
 import { HASH_CODE_MAX } from "./constants.js";
 import { getOC } from "./oclib.js";
 
-import {
+import type {
   TopoDS_Face,
   TopoDS_Shape,
   TopoDS_Edge,
@@ -24,9 +25,10 @@ import {
 } from "replicad-opencascadejs";
 import { EdgeFinder, FaceFinder } from "./finders.js";
 import { rotate, translate, mirror, scale as scaleShape } from "./geomHelpers";
-import { CurveType, findCurveType } from "./definitionMaps";
+import type { CurveType} from "./definitionMaps";
+import { findCurveType } from "./definitionMaps";
 
-export { CurveType };
+export type { CurveType };
 
 export type AnyShape =
   | Vertex
