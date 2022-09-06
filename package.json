@@ -17,5 +17,6 @@
   "main": "q",
   "repository": "q",
   "author": "q",
-  "license": "q"
+  "license": "q",
+  "packageManager": "yarn@3.2.3"
 }

@@ -19,7 +19,6 @@
     "buildTestWasm": "cd build-config; docker run -it --rm -v $(pwd):/src -u $(id -u):$(id -g) donalffons/opencascade.js test-copy.yml && mv rocketExample* ../src; cd -",
     "buildFullWasm": "cd build-config; docker run -it --rm -v $(pwd):/src -u $(id -u):$(id -g) donalffons/opencascade.js full-occt.yml && mv fullOCCT* ../src; cd -",
     "buildExamplesWasm": "cd build-config; docker run -it --rm -v $(pwd):/src -u $(id -u):$(id -g) donalffons/opencascade.js customBuild.examples.yml && mv fullOCCT* ../src; cd -",
-
     "updateTestDocker": "docker pull okanpin/opencascade_wasm_sample",
     "buildOkanpinWasm": "cd build-config; docker run -it --rm -v $(pwd):/src -u $(id -u):$(id -g) okanpin/opencascade_wasm_sample test.yml && mv rocketExample* ../src; cd -"
   }

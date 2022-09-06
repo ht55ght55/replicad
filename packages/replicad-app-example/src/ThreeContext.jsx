@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei/core/OrbitControls";
 import * as THREE from "three";
 
 // We change the default orientation - threejs tends to use Y are the height,
