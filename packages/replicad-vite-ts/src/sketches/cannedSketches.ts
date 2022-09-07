@@ -1,16 +1,17 @@
-import {
+import type { BSplineApproximationConfig } from "../shapeHelpers"
+import{
   assembleWire,
-  BSplineApproximationConfig,
   makeBSplineApproximation,
   makeCircle,
   makeEllipse,
 } from "../shapeHelpers";
-import { Plane, PlaneName, Point, Vector } from "../geom";
+import { Plane, Vector } from "../geom";
+import type {PlaneName, Point} from "../geom";
 import Sketcher from "../Sketcher";
 import { makePlane } from "../geomHelpers";
 import Sketch from "./Sketch";
-import { Face } from "../shapes";
-import { Point2D } from "../lib2d";
+import type { Face } from "../shapes";
+import type { Point2D } from "../lib2d";
 import { localGC } from "../register";
 import { roundedRectangleBlueprint } from "../blueprints/cannedBlueprints";
 
