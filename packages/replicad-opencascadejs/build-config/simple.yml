@@ -1,0 +1,38 @@
+mainBuild:
+  name: customBuild.simple.js
+  bindings:
+    - symbol: Message_ProgressRange
+    - symbol: TColgp_Array1OfDir
+    - symbol: TColgp_Array1OfPnt
+    - symbol: TColgp_Array1OfPnt2d
+    - symbol: TColgp_Array2OfPnt
+    - symbol: TColStd_Array1OfBoolean
+    - symbol: TColgp_Array1OfVec
+    - symbol: TColStd_Array1OfInteger
+    - symbol: TColStd_Array1OfReal
+    - symbol: Poly_Array1OfTriangle
+    - symbol: Standard_Transient
+    - symbol: Precision
+
+    - symbol: gp_XYZ
+    - symbol: gp_XY
+    - symbol: gp_Vec
+    - symbol: gp_Pnt
+    - symbol: gp_Dir
+    - symbol: gp_Ax1
+    - symbol: gp_Ax2
+    - symbol: gp_Ax3
+    - symbol: gp_Circ
+    - symbol: gp_Elips
+    - symbol: gp_Cylinder
+    - symbol: gp_Trsf
+    - symbol: gp_GTrsf
+additionalCppCode: |
+  #include <iostream>
+  class Test {
+  public:
+    static int foo() {
+      std::cout << "foo" << std::endl;
+      return 123;
+    }
+  };
