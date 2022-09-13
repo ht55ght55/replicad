@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "updateDocker": "docker pull donalffons/opencascade.js",
-    "buildWasm": "cd build-config; docker run --memory-swap -1 --rm -it -v $(pwd):/src -u $(id -u):$(id -g) donalffons/opencascade.js custom_build_single.yml && mv replicad_single* ../src; cd -",
+    "buildWasm": "cd build-config; docker run -m=4g --memory-swap=-1 --platform linux/arm64 --rm -it -v $(pwd):/src -u $(id -u):$(id -g) donalffons/opencascade.js custom_build_single.yml && mv replicad_single* ../src; cd -",
     "buildTestWasm": "cd build-config; docker run -it --rm -v $(pwd):/src -u $(id -u):$(id -g) donalffons/opencascade.js test-copy.yml && mv rocketExample* ../src; cd -",
     "buildFullWasm": "cd build-config; docker run -it --rm -v $(pwd):/src -u $(id -u):$(id -g) donalffons/opencascade.js full-occt.yml && mv fullOCCT* ../src; cd -",
     "buildExamplesWasm": "cd build-config; docker run -it --rm -v $(pwd):/src -u $(id -u):$(id -g) donalffons/opencascade.js customBuild.examples.yml && mv fullOCCT* ../src; cd -",
